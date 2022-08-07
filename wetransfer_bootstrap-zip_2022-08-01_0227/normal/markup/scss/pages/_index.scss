@@ -1,0 +1,244 @@
+.banner-part {
+    /* height: 100vh */
+    position: relative;
+    background: color url('./') repeat 50% 50% /cover; /*cover covers the entire screen; contain shows the same size asa the original picture*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+        color: $white;
+    }
+
+    &:before {
+    content: '';
+    height: 100vh;
+    display: block;
+    }
+
+    &:after {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+     background-color: #bf3d42; /*rgba(191,61,66,1) where a (1) is opacity */
+    mix-blend-mode: darken;
+    }
+}
+
+.banner-content {
+    position: relative;
+    z-index: 9;
+    max-width: 976px; /*depends on the browser so change if no change*/
+    /* width: 100%; */
+    color: #fff;
+    text-align: center;
+
+    .banner-content p{
+    margin: 0 0 25px;
+    }
+}
+
+.about-part {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    .image-wrap{
+        position: relative;
+        /* width: 500px;
+        height: 345px; */
+        padding-top: 65%;
+        border-radius: 25px;
+        overflow: hidden;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .btn-wrap {
+        margin-top: 60px;
+    }
+}
+
+.products-part {
+    text-align: center;
+
+    h2 {
+        line-height: 1;
+        margin-bottom: 17px;
+    }
+
+    p {
+        margin: 0 0 15px;
+    }
+
+    .style::after {
+        top: -6px;
+    }
+
+    .four-columns {
+        padding: 45px 0;
+    }
+    
+    .product-detail {
+        background-color: #121212;
+        border-radius: 23px;
+        overflow: hidden;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .col {
+        .product-image {
+            height: 400px;
+            @include flex(wrap, center, center);
+            position: relative;
+        }
+
+        &:nth-child(2) {
+            .product-image{
+                height: 305px;
+            }
+        }
+
+        &:nth-child(3) {
+            .product-image{
+                height: 250px;
+            }
+        }
+
+        &:last-child {
+            .product-image {
+                height: 180px;
+            }
+        }
+    }
+
+    .product-content {
+        padding: 0 20px 13px;
+        font-size: 14px;
+        line-height: 1.57;
+        color: #fff;
+    }
+    
+    .product-code {
+        // width: 62px;
+        // height: 62px;
+        @include size(62px);
+        border-radius: 50%;
+        color: #fff;
+        background-color: #191919;
+        font-size: 25px;
+        border: 2px solid #b03d42;
+        /* display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center; */
+        line-height: 62px;
+        text-align: center;
+        margin: -30px auto 0;
+        position: relative;
+        z-index: 9;
+    }
+
+    
+    .button-wrap {
+        padding: 15px 0;
+    }
+
+    .btn {
+        text-transform: capitalize;
+
+        &.primary {
+            border-color: #b03d42;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.process-part {
+    background: $dark-black;
+    text-align: center;
+    color: $white;
+    padding: 100px 0;
+
+    .container {
+        max-width: 1007px;
+    }
+    h2{
+        color: $white;
+        margin-bottom: 20px;
+    }
+    
+    .heading-wrap {
+        max-width: 940px;
+        margin: 0 auto 85px;
+    }
+
+    .icon-wrap {
+        border: 1px solid $white;
+        border-radius: 9px;
+        height: 148px;
+        // display: flex;
+        // flex-wrap: wrap;
+        // align-items: center;
+        // justify-content: center;
+        @include flex(wrap, center, center);
+        margin-bottom: 22px;
+    }
+
+    .process-text {
+        @include align-vertical(top);
+        font-size: 20px;
+    }
+
+    .four-columns {
+        margin: 0 -31px 80px;
+        .col{
+            padding: 0 31px;
+        }
+    }
+
+    .btn {
+        text-transform: capitalize;
+    }
+}
+
+.feedback-part {
+    text-align: center;
+    padding: 100px 0;
+    .feedback-img {
+        @include size(158px);
+        margin: 0 auto;
+        border-radius: 50%;
+        border: 2px solid $red;
+        overflow: hidden;
+
+        img{
+            object-fit: cover;
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    cite {
+        font-size: 19px;
+        line-height: 1.57;
+        display: block;
+        text-transform: capitalize;
+        font-style: normal;
+    }
+
+    q {
+        quotes: none;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+
+
+

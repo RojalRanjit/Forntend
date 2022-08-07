@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    color: gray;
+}
+
+.holder{
+    background-color: gray;
+    border: 2px solid black;
+    color: white;
+    width: calc(500px + 4px);
+    padding: 25px 10px;
+    position: relative;
+    /* top: auto;
+    bottom: auto;               the position is already auto in default
+    left: auto;
+    right: auto; */
+    margin: 50px;
+}
+
+.tag{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+    background-color: black;    
+    border-radius: 4px;
+    /*position: relative;
+    position: absolute;
+    position: fixed;   when the item to be placed is according to the window
+    position: sticky;   used only when ther is no overflow in the bodys
+    position: static; */
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    z-index: 1;
+}
+
+.link{
+    bottom: -10px;
+    left: auto;
+    left: 100%;
+    position: absolute;
+    z-index: 99;
+}
+
+.align{
+    overflow: hidden;
+}
+ .left{
+    display: inline-block;
+    width: 50%;
+    height: 150px;
+    background-color: blue;
+}
+.right{
+    display: inline-block;
+    width: calc(50% - 2px);
+    height: 50px;
+    background-color: green;
+    vertical-align: top;
+} 

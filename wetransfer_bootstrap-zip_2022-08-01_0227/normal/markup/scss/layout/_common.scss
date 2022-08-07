@@ -1,0 +1,125 @@
+#wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1210px; //width + padding(left & right) + border(left & right)
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    &.lg {
+        max-width: 1310px;
+    }   
+}
+
+.style {
+    position: relative;
+    padding-left: 44px;
+    display: inline-block;
+    vertical-align: top;
+
+    &.style::after {
+        content: '';
+        width: 42px;
+        height: 42px;
+        position: absolute;
+        /* top: 10px; */
+        bottom: 5px;
+        left: 0;
+        background: url('../img/chip.png') no-repeat center/cover;
+        display: block;
+    }
+}
+
+.bg-stretch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+}
+
+.overline-text {
+    text-transform: uppercase;
+    font-size: 34px;
+}
+
+.btn {
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+
+    @include animate(all, 0.35s, ease-in-out);
+    &.primary {
+    padding:  8px 15px;
+    background-color: #333333;
+    border: 2px solid #fff;
+    color: #fff;
+    min-width: 215px;
+    /* border-radius: 45%; */
+    border-radius: 30px;
+    margin: 0;
+    
+        &:hover {
+            background: $white;
+            border: 2px solid $black;
+            color: $black;
+        }
+    }    
+
+    &.secondary {
+    padding: 8px 15px;
+    background-color: #bf3d42;
+    border: 2px solid #bf3d42;
+    color: #fff;
+    min-width: 180px;
+    /* border-radius: 45%; */
+    border-radius: 30px;
+    margin: 0;
+        &:hover {
+            background: $white;
+            border: 2px solid #bf3d42;
+            color: #bf3d42;
+        }
+    }  
+}
+
+.two-columns,
+.four-columns {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+
+    .col {
+        flex: 1;  
+        padding: 0 20px; 
+
+        &.large-col {
+            flex: auto;
+            width: 58.33%;
+        }
+
+        &.small-col {
+            flex: auto;
+            width: 41.66%;
+        }
+    }
+}
+
+.four-columns {
+    margin: 0 -10px;
+    
+    .col{
+        padding: 0 10px;
+    }
+}
