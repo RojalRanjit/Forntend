@@ -57,23 +57,20 @@ $h6-font-size: 16px !default;
 $headings-font-family: $base-font-sans-serif !default;
 $headings-color: $black !default;
 
-
 $animation-speed: 0.3s;
 
-// $icomoon-font-family: "icomoon" !default;
-// $icomoon-font-path: "../fonts" !default;
+//icons
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "../fonts" !default;
 
-// $icon-arrow-right: "\e906";
-// $icon-arrow-left: "\e907";
-// $icon-search: "\e904";
-// $icon-add: "\e900";
-// $icon-right: "\e901";
-// $icon-left: "\e902";
-// $icon-play: "\e90c";
-// $icon-linkedin: "\e905";
-// $icon-instagram: "\e908";
-// $icon-angle-left: "\e909";
-// $icon-down: "\e903";
-// $icon-angle-up: "\e90a";
-// $icon-angle-right: "\e90b";
-// $icon-pause: "\ea16";
+$icon-left_quote: "\e909";
+$icon-right_quote: "\e90a";
+$icon-call: "\e900";
+$icon-next: "\e901";
+$icon-prev: "\e902";
+$icon-location: "\e903";
+$icon-linkedin: "\e904";
+$icon-instagram: "\e905";
+$icon-twitter: "\e906";
+$icon-facebook: "\e907";
+$icon-mail: "\e908";
