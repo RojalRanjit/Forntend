@@ -34,7 +34,7 @@ jQuery('.feedback-slider').slick({
   });
 
   jQuery('.banner-slider').slick({
-    dots: false,
+    dots: true,
     infinite: false,
     speed: 300,
     mobileFirst: false,
@@ -44,3 +44,11 @@ jQuery('.feedback-slider').slick({
     // prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="icon-prev"></i></button>',
     // nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="icon-next"></i></button>',
   });
+
+  var opener = jQuery('.nav-opener');
+  if(opener) {
+    opener.on('click',function() {
+      jQuery('body').toggleClass('nav-active');
+    })
+  }
+  // console.log(opener);

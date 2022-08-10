@@ -1,30 +1,44 @@
 .banner-part {
         // background: color url('./') repeat 50% 50% /cover; /*cover covers the entire screen; contain shows the same size asa the original picture*/
     .banner-slider{
-        /* height: 100vh */
-        padding: 65px 0;
+        height: 100vh; 
+        // padding: 65px 0;
         position: relative;
         display: flex;
         // flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
+        // align-items: center;
+        // justify-content: center;
+
+        .slick-track {
+            display: flex !important;
+            height: 100%;
+        }
+
+        .slick-slide {
+            height: auto;
+            position: relative;
+            @include flex(wrap,center,center);
+        }
 
         &:before {
         content: '';
         height: 100vh;
         display: block;
         }
-    
-        &:after {
-        content:'';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #bf3d42; /*rgba(191,61,66,1) where a (1) is opacity */
-        mix-blend-mode: darken;
+        .bg-stretch{
+            &:after {
+                content:'';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #bf3d42; /*rgba(191,61,66,1) where a (1) is opacity */
+                mix-blend-mode: darken;
+                pointer-events: none;
+                }
         }
+
     }
 
     h1{
@@ -46,9 +60,11 @@
 }
 
 .about-part {
-    padding-top: 120px;
+    @include media('>=desktop'){
+        padding-top: 120px;
     padding-bottom: 120px;
-
+    }
+    
     .image-wrap{
         position: relative;
         /* width: 500px;
@@ -146,7 +162,7 @@
         position: relative;
         z-index: 9;
     }
-
+    
     
     .button-wrap {
         padding: 15px 0;
@@ -273,6 +289,42 @@
     }
 }
 
+.slick-dots {
+    @extend %listreset;
+    position: absolute;
+    bottom: 72px;
+    left: 0;
+    right: 0;
+    @include flex(wrap,center,center);
+
+    li {
+        padding: 0 2px 0 3px;
+
+        &.slick-active {
+            button{
+            @include size(26px);
+            background-color: transparent;
+            }   
+        }
+    }
+
+    button {
+        padding: 0;
+        display: block;
+        @include hide-text;
+        background-color: #f9f9fb;
+        @include size(18px);
+        border-radius: 50%;
+        border: 3px solid #f9f9fb;
+        @include animate(all,0.35s,ease);
+
+        &:hover {
+            @include size(26px);
+            background-color: transparent;
+        }
+    }
+}
+
 .icon-left_quote {
     color: $black;
     text-decoration: none;
@@ -283,4 +335,6 @@
     text-decoration: none;
 }
 
-
+.contact-part{
+    text-align: center;
+}
